@@ -9,15 +9,11 @@ repositories {
 
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.8.2"))
-    implementation(platform("org.springframework.boot:spring-boot-dependencies:2.6.3"))
 }
 
 dependencies {
     compileOnly("org.jetbrains:annotations:22.0.0")
     testCompileOnly("org.jetbrains:annotations:22.0.0")
-    implementation("com.devskiller.friendly-id:friendly-id-spring-boot-starter:1.1.0")
-    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
-
 
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
