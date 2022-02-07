@@ -1,2 +1,2 @@
-rootProject.name = "ddd"
+rootProject.name = "dbc4j"
 
