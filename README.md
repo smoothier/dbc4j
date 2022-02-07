@@ -1,5 +1,4 @@
-# dbc4j
-Design by Contract for Java
+# Design by Contract for Java
 
 ## Example
 ```java
