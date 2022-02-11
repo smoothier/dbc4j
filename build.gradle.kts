@@ -3,6 +3,9 @@ plugins {
     id("org.jetbrains.qodana") version "0.1.13"
 }
 
+group = "com.github.smoothier"
+version = "1.0.0"
+
 repositories {
     mavenCentral()
 }
@@ -18,7 +21,6 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 }
-
 
 val reportsDir = file("$buildDir/reports")
 val dataDir = file("$buildDir/data")
@@ -43,8 +45,6 @@ tasks.register<DefaultTask>("codequality") {
         Analyses the code quality.
     """.trimIndent()
 }
-val TaskContainer.codequality: TaskProvider<DefaultTask>
-    get() = named<DefaultTask>("codequality")
 
 tasks {
     runInspections {
@@ -69,3 +69,6 @@ tasks {
         dependsOn += runInspections
     }
 }
+
+val TaskContainer.codequality: TaskProvider<DefaultTask>
+    get() = named<DefaultTask>("codequality")
